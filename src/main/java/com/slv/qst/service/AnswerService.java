@@ -14,10 +14,10 @@ public class AnswerService {
     private final AnswerRepository answerRepository;
     private final NotificationProducer notificationProducer;
 
-    public void answer(Long qst_id, String ans_emp_id, String title, String content){
-        final Answer answer = new Answer(qst_id, ans_emp_id, title, content);
+    public void answer(Long qstId, String ansEmpId, String title, String content){
+        final Answer answer = new Answer(qstId, ansEmpId, title, content);
         final Answer newAnswer = answerRepository.save(answer);
-        notificationProducer.notifyAnswer(newAnswer.getAns_id());
+        notificationProducer.notifyAnswer(newAnswer.getAnsId());
     }
 
     public void delete(Long ansId){

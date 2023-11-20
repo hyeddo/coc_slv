@@ -16,17 +16,22 @@ public class Answer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ans_id;
+    @Column(name = "ans_id")
+    private Long ansId;
 
-    private Long qst_id;
-    private String ans_emp_id;
+    @Column(name = "qst_id")
+    private Long qstId;
+    @Column(name = "ans_emp_id")
+    private String ansEmpId;
+    @Column(name = "title")
     private String title;
+    @Column(name = "content")
     private String content;
     // private int open_yn;
 
-    public Answer(Long qst_id, String ans_emp_id, String title, String content){
-        this.qst_id = qst_id;
-        this.ans_emp_id = ans_emp_id;
+    public Answer(Long qstId, String ansEmpId, String title, String content){
+        this.qstId = qstId;
+        this.ansEmpId = ansEmpId;
         this.title = title;
         this.content = content;
     }

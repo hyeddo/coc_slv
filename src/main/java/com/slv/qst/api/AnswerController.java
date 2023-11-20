@@ -14,8 +14,8 @@ public class AnswerController {
     private final AnswerService answerService;
 
     @PostMapping("/answer")
-    private void answer(@RequestParam Long qst_id, @RequestParam String ans_emp_id, @RequestParam String title, @RequestParam String content) {
-        answerService.answer(qst_id, ans_emp_id, title, content);
+    private void answer(@RequestParam Long qstId, @RequestParam String ansEmpId, @RequestParam String title, @RequestParam String content) {
+        answerService.answer(qstId, ansEmpId, title, content);
     }
 
 }

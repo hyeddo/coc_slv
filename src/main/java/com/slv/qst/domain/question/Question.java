@@ -16,32 +16,44 @@ public class Question {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long qst_id;
+    @Column(name = "qst_id")
+    private Long qstId;
 
-    private String qst_emp_id;
-    private Long maincate_id;
-    private Long midcate_id;
-    private Long subcate_id;
+    @Column(name = "qst_emp_id")
+    private String qstEmpId;
+    @Column(name = "maincate_id")
+    private Long maincateId;
+    @Column(name = "midcate_id")
+    private Long midcateId;
+    @Column(name = "subcate_id")
+    private Long subcateId;
+    @Column(name = "title")
     private String title;
+    @Column(name = "status")
     private int status;
+    @Column(name = "content")
     private String content;
-    private String rsp_emp_id;
-    private String maincate_name;
-    private String midcate_name;
-    private String subcate_name;
+    @Column(name = "rsp_emp_id")
+    private String rspEmpId;
+    @Column(name = "maincate_name")
+    private String maincateName;
+    @Column(name = "midcateName")
+    private String midcateName;
+    @Column(name = "subcate_name")
+    private String subcateName;
 
-    public Question(String title, String content, String qst_emp_id, String rsp_emp_id, Long maincate_id, Long midcate_id, Long subcate_id, String maincate_name, String midcate_name, String subcate_name) {
+    public Question(String title, String content, String qstEmpId, String rspEmpId, Long maincateId, Long midcateId, Long subcateId, String maincateName, String midcateName, String subcateName) {
         this.title = title;
         this.content = content;
-        this.qst_emp_id = qst_emp_id;
-        this.rsp_emp_id = rsp_emp_id;
+        this.qstEmpId = qstEmpId;
+        this.rspEmpId = rspEmpId;
         this.status = 1;
-        this.maincate_id = maincate_id;
-        this.midcate_id = midcate_id;
-        this.subcate_id = subcate_id;
-        this.maincate_name = maincate_name;
-        this.midcate_name = midcate_name;
-        this.subcate_name = subcate_name;
+        this.maincateId = maincateId;
+        this.midcateId = midcateId;
+        this.subcateId = subcateId;
+        this.maincateName = maincateName;
+        this.midcateName = midcateName;
+        this.subcateName = subcateName;
     }
 
 }

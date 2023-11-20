@@ -14,10 +14,10 @@ public class QuestionService {
     private final QuestionRepository questionRepository;
     private final NotificationProducer notificationProducer;
 
-    public void quest(String title, String content, String qst_emp_id, String rsp_emp_id, Long maincate_id, Long midcate_id, Long subcate_id, String maincate_name, String midcate_name, String subcate_name){
-        final Question question = new Question(title, content, qst_emp_id, rsp_emp_id, maincate_id, midcate_id, subcate_id, maincate_name, midcate_name, subcate_name);
+    public void quest(String title, String content, String qstEmpId, String rspEmpId, Long maincateId, Long midCateId, Long subcateId, String maincateName, String midcateName, String subcateName){
+        final Question question = new Question(title, content, qstEmpId, rspEmpId, maincateId, midCateId, subcateId, maincateName, midcateName, subcateName);
         final Question newQuestion = questionRepository.save(question);
-        notificationProducer.notifyQuest(newQuestion.getQst_id());
+        notificationProducer.notifyQuest(newQuestion.getQstId());
     }
 
     public void delete(Long qstId){
