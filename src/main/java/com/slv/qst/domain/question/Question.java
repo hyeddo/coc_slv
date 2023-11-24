@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "Question")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
