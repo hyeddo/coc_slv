@@ -1,6 +1,6 @@
 package com.slv.qst.service;
 
-import com.slv.qst.api.request.QuestPostReq;
+import com.slv.qst.request.QuestPostReq;
 import com.slv.qst.domain.question.Question;
 import com.slv.qst.domain.question.QuestionRepository;
 import com.slv.qst.producer.NotificationProducer;
@@ -22,11 +22,11 @@ public class QuestionService {
 
     @Transactional
     public void quest(QuestPostReq questPostReq){
-//        Question question = Question.builder().
-//                title()
-//                .build();
-//        Question newQuestion = questionRepository.save(question);
-//        notificationProducer.notifyQuest(newQuestion.getQstId());
+        Question question = Question.builder().
+                title()
+                .build();
+        Question newQuestion = questionRepository.save(question);
+        notificationProducer.notifyQuest(newQuestion.getQstId());
     }
 
     public void delete(Long qstId){

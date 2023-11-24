@@ -1,7 +1,8 @@
-package com.slv.qst.api.request;
+package com.slv.qst.request;
 
+import lombok.Builder;
 import lombok.Getter;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Getter
 public class QuestPostReq {
@@ -15,4 +16,9 @@ public class QuestPostReq {
     String maincateName;
     String midcateName;
     String subcateName;
+    String emergYn;
+    String questImage;
+
+             "emergYn” : string,
+             “questImage” : multipart
 }
