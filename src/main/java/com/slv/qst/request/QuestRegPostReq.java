@@ -1,11 +1,10 @@
 package com.slv.qst.request;
 
-import lombok.Builder;
 import lombok.Getter;
 
 
 @Getter
-public class QuestPostReq {
+public class QuestRegPostReq {
     String title;
     String content;
     String qstEmpId;
@@ -18,7 +17,4 @@ public class QuestPostReq {
     String subcateName;
     String emergYn;
     String questImage;
-
-             "emergYn” : string,
-             “questImage” : multipart
 }
